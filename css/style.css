@@ -1,0 +1,221 @@
+
+/* @import url("http://"); */ 
+/* Подключение шрифта */
+
+/* Обнуление стилей */
+*,
+*::before *::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+ 
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+html,body {
+    height: 100%;
+}
+
+/* По умолчанию 16 рх */
+html {
+    font-size: 16px;
+}
+
+body {
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  background-color: #f5f5f5;
+} 
+ 
+.wrapper {
+    min-height: 100%;  
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ................. */
+.main {
+    flex-grow: 1;
+}
+
+
+/* _ibg - image-background */
+._ibg {
+    position: relative;
+}
+
+._ibg img {
+    object-fit: cover;
+    object-position: center;
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       left: 0;
+}
+
+/* Условные ПК, ноутбуки и ТВ */
+/* 1050 px из макета (контейнер + отстуы) */
+@media (max-width: 1050px) {
+}
+/* Условные планшеты */
+@media (max-width: 991.98px){
+}
+/* Условные мобилки */
+@media (max-width: 767.98px){
+}
+
+[class*="__container"]{
+    /* В этом случае ставим ширину 1140px, соотвветственно контейнер будет 1170px
+    так как padding у нас по 15px.
+    */
+    max-width: 1140px;
+    /* выравнивание по центру margin: 0px auto;*/
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+
+№1
+@media (max-width: 1140px) {
+    [class*="__container"] {
+        /* max-width: 970px; */
+    }
+}
+
+№2
+@media (max-width: 991.98px){
+    [class*="__container"] {
+        /* max-width: 750px; */
+    }
+}
+
+№3
+@media (max-width: 767.98px){
+    [class*="__container"]{
+/* max-width: none; */
+    }
+}
+
+
+.block {
+
+}
+.block__container {
+
+}
+
+.block__items {
+display: flex;
+flex-wrap: wrap;
+row-gap: 20px;
+margin: 0px -15px;
+}
+
+.block__item {
+    min-width: 290px;
+    padding: 0px 10px;
+flex: 1 1 33.333%;
+max-width: calc(33.333% - 20px);
+}
+
+
+.item-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:1140px){
+    .item-block {
+      max-width: 350px;  
+    }
+}
+
+.item-block__picture {
+    padding: 0px 0px 74.28% 0px;
+}
+
+.item-block__image {
+}
+
+/* object-fit
+fill	   -Значение по умолчанию. Содержимое замещаемого элемента полностью заполняет область контейнера тега, используя его высоту и ширину.
+contain	   -Содержимое элемента масштабируется, выравниваясь по центру с сохранением пропорций таким образом, чтобы полностью поместиться внутри контейнера.
+cover	    -Содержимое элемента обрезается, выравниваясь по центру с сохранением пропорций таким образом, чтобы полностью заполнить область контейнера.
+scale-down	-Содержимое элемента выбирает из двух значений none и contain то значение, которое даёт меньшие размеры.
+none	    -Замещаемое содержимое не изменяет свои собственные размеры, чтобы поместиться и заполнить область контейнера.
+initial	    -Устанавливает это свойство в значение по умолчанию.
+inherit	    -Наследует значение свойства от родительского элемента. */
+
+/* Свойство object-position используется в сочетании с object-fit и задаёт положение содержимого замещаемого элемента внутри контейнера относительно координатных осей X и Y. 
+Значение по умолчанию 50% 50%. Свойство анимируется. Не наследуется. 
+object-position: center; по умолчанию
+*/
+
+.item-block__body {
+    /* Разрешаем body увеличиваться */
+    flex: 1 1 auto;
+    padding: 15px;
+   background-color: #5c5656;
+   display: flex;
+   flex-direction: column;
+}
+
+.item-block__body *:not(:last-child) {
+margin: 0px 0px 15px 0px;
+}
+
+.item-block__title {
+   text-decoration: none;
+     font-size: 40px;
+    color: #f5f5f5;
+}
+.item-block__text {
+    /* Разрешаем тексту увеличиваться */
+    flex: 1 1 auto;
+    line-height: 150%;
+    color: #eee;
+    font-size: 16px;
+     
+}
+.item-block__button {
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+color: #f5f5f5;
+    background-color: green;
+}
+
+
+
+
